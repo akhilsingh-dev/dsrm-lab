@@ -1,21 +1,21 @@
 inputs = {
     ## Answer = True
     "snapshot1" : [
-        [3,1,2],
-        [1,3,2],
-        [1,2,3]
-    ],
-    ## Answer = False (Node 1 counter is messed up)
-    "snapshot2" : [
-        [2,1,2],
-        [1,3,2],
-        [3,2,3]
+        [2,0,0],
+        [1,1,2],
+        [2,0,3]
     ],
     ## Answer = True
+    "snapshot2" : [
+        [2,0,0],
+        [1,1,2],
+        [1,0,2]
+    ],
+    ## Answer = False
     "snapshot3" : [
-        [2,1,2],
-        [1,3,2],
-        [2,2,3]
+        [1,0,0],
+        [1,1,2],
+        [2,0,3]
     ]
 }
 
@@ -30,4 +30,4 @@ def is_consistent(snapshot: list) -> bool:
 
 
 for snapshot in inputs.values():
-    print(is_consistent(snapshot))
+    print("Consistent" if is_consistent(snapshot) else "Inconsistent")

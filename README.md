@@ -2,8 +2,10 @@
 
 This repository holds all lab assignments for the Distributed Systems Lab course.
 
+## Requirements:
+1. Python 3.6+
 
-## How to use:
+## Usage:
 
 1. Run `pip install -r requirements.txt` in your preferred python environment.
 2. Run `python <assignment-filename>.py`.

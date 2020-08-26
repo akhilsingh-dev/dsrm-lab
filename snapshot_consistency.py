@@ -1,23 +1,29 @@
-inputs = {
+inputs = [
     ## Answer = True
-    "snapshot1" : [
-        [2,0,0],
-        [1,1,2],
-        [2,0,3]
-    ],
+    {
+        "snapshot" : [
+            [2,0,0],
+            [1,1,2],
+            [2,0,3]
+        ]
+    },
     ## Answer = True
-    "snapshot2" : [
-        [2,0,0],
-        [1,1,2],
-        [1,0,2]
-    ],
+    {
+        "snapshot" : [
+            [2,0,0],
+            [1,1,2],
+            [1,0,2]
+        ]
+    },
     ## Answer = False
-    "snapshot3" : [
-        [1,0,0],
-        [1,1,2],
-        [2,0,3]
-    ]
-}
+    {
+        "snapshot" : [
+            [1,0,0],
+            [1,1,2],
+            [2,0,3]
+        ]
+    }
+]
 
 def is_consistent(snapshot: list) -> bool:
     # Transpose the snapshot
@@ -30,5 +36,5 @@ def is_consistent(snapshot: list) -> bool:
 
 
 if __name__ == "__main__":
-    for snapshot in inputs.values():
-        print("Consistent" if is_consistent(snapshot) else "Inconsistent")
+    for inp in inputs:
+        print("Consistent" if is_consistent(**inp) else "Inconsistent")

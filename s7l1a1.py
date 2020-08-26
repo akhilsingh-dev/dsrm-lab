@@ -1,3 +1,13 @@
+inputs = {
+    "pairs" : [
+        ([1,8,0],[3,8,0]),
+        ([2,0,6],[3,1,9]),
+        ([6,8,0],[7,7,0]),
+        ([8,0,9],[9,1,8]),
+    ]
+}
+
+
 def check_concurrency(m1:list,m2:list) -> None:
     try:
         ## Check for equal length
@@ -19,6 +29,5 @@ def check_concurrency(m1:list,m2:list) -> None:
 
 
 if __name__ == "__main__":
-    m1 = list(map(int,input().split(" ")))
-    m2 = list(map(int,input().split(" ")))
-    check_concurrency(m1,m2)
+    for pair in inputs["pairs"]:
+        check_concurrency(*pair)

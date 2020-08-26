@@ -29,5 +29,6 @@ def is_consistent(snapshot: list) -> bool:
     return True
 
 
-for snapshot in inputs.values():
-    print("Consistent" if is_consistent(snapshot) else "Inconsistent")
+if __name__ == "__main__":
+    for snapshot in inputs.values():
+        print("Consistent" if is_consistent(snapshot) else "Inconsistent")
